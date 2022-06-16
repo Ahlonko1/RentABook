@@ -1,7 +1,12 @@
 class BooksController < ApplicationController
 
   def index
+
+    if params[:query].present?
+      @boats = Boat.search_by_columns("%#{params[:query]}%")
+    else
     @books = Books.all
+    end
   end
 
   def new
@@ -19,6 +24,4 @@ class BooksController < ApplicationController
   def book_params
     params.require(:book).permit(:title, :language, :synopsis)
   end
-
-
 end
