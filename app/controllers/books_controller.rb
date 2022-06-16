@@ -1,11 +1,9 @@
 class BooksController < ApplicationController
-
   def index
-
     if params[:query].present?
-      @boats = Boat.search_by_columns("%#{params[:query]}%")
+      @books = Book.search_by_columns("%#{params[:query]}%")
     else
-    @books = Books.all
+      @books = Book.all
     end
   end
 
