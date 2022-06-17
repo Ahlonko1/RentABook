@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-sm-6">
+    <div class="col-6">
       <h1>Welcome to RentABook</h1>
       <p>Find your next reading, you bookworm!!</p>
       <%= form_tag books_path, method: :get, class: "d-flex" do %>
@@ -9,7 +9,9 @@
           class: "form-control",
           placeholder: "Find a book"
         %>
+
         <%= submit_tag "Search", class: "btn btn-primary" %>
+
       <% end %>
     </div>
   </div>

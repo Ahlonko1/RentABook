@@ -1,9 +1,14 @@
 <h1>Books</h1>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <% @books.each do |b| %>
+      <h3><%= b.title %></h3>
+      <p><%= b.language %></p>
+      <p><%= b.synopsis %></p>
 
-<% @books.each do |b| %>
-<h3><%= b.title %></h3>
-<p><%= b.language %></p>
-<p><%= b.synopsis %></p>
-
-<% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
 <%= link_to "Back", root_path, class: "btn btn-primary" %>
