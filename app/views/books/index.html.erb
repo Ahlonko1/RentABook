@@ -1,8 +1,9 @@
 <h1>Books</h1>
 
 <% @books.each do |b| %>
-<h2><%= b.title %></h2>
+<h3><%= b.title %></h3>
 <p><%= b.language %></p>
 <p><%= b.synopsis %></p>
 
 <% end %>
+<%= link_to "Back", root_path, class: "btn btn-primary" %>
