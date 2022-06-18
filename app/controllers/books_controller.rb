@@ -13,9 +13,14 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params)
-    @book.save
-    redirect_to restaurant_path(@book)
+    if @book.save
+      redirect_to restaurant_path(@book)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
+
+
 
   private
 
