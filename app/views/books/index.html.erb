@@ -3,6 +3,7 @@
   <div class="row justify-content-center">
     <div class="col-6">
       <% @books.each do |b| %>
+      <%= cl_image_tag @book.photos.first.key, crop: :fill, class:"rounded-3",style: "width: 100%; height: 100%;" %>
       <h3><%= b.title %></h3>
       <p><%= b.language %></p>
       <p><%= b.synopsis %></p>
