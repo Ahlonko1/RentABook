@@ -28,8 +28,8 @@ puts "Author 1 created"
 author_1.save!
 
 puts "Create book 1..."
-book = Book.new(title: "HARRY POTTER AND THE CHAMBER OF SECRETS", language: "English", author: author_1, user_id: 2, synopsis: "Harry Potter's summer has included the worst birthday ever, doomy warnings from a house-elf called Dobby, and rescue from the Dursleys by his friend Ron Weasley in a magical flying car! Back at Hogwarts School of Witchcraft and Wizardry for his second year, Harry hears strange whispers echo through empty corridors - and then the attacks start. Students are found as though turned to stone ... Dobby's sinister predictions seem to be coming true.")
-book.photos.attach([
+book_1 = Book.new(title: "HARRY POTTER AND THE CHAMBER OF SECRETS", language: "English", author: author_1, user_id: 2, synopsis: "Harry Potter's summer has included the worst birthday ever, doomy warnings from a house-elf called Dobby, and rescue from the Dursleys by his friend Ron Weasley in a magical flying car! Back at Hogwarts School of Witchcraft and Wizardry for his second year, Harry hears strange whispers echo through empty corridors - and then the attacks start. Students are found as though turned to stone ... Dobby's sinister predictions seem to be coming true.")
+book_1.photos.attach([
   {
     io: File.open('public/images/HP_chamber of secrets.jpg'),
     filename: 'anyname.jpg',
@@ -47,4 +47,4 @@ book.photos.attach([
   }
 ])
 puts "Book 1 created"
-book.save!
+book_1.save!
